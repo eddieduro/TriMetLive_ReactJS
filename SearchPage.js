@@ -13,7 +13,22 @@ import React, {
 } from 'react-native';
 
 class SearchPage extends Component {
+	constructor(props) {
+	  super(props);
+	
+	  this.state = {
+	  	searchString: '97209'
+	  };
+	}
+
+	onSearchTextChanged(event){
+		console.log('onSearchTextChanged');
+		this.setState({ searchString: event.nativeEvent.text});
+		console.log(this.state.searchString);
+	}
+
 	render() {
+		console.log('SearchPage.render');
 		return (
 			<View style={styles.container}>
 				<Text style={styles.description}>
@@ -25,6 +40,9 @@ class SearchPage extends Component {
 				<View style={styles.flowRight}>
 					<TextInput
 						style={styles.searchInput}
+						value={this.state.searchString}
+						//Whenever the user changes the text, you invoke the function supplied to onChange; in this case, it’s onSearchTextChanged.
+						onChange={this.onSearchTextChanged.bind(this)}
 						placeholder="Search via street address or zipcode"/>
 					<TouchableHighlight style={styles.button}
 						underlayColor='#99d9f4'>
