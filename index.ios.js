@@ -11,18 +11,6 @@ import React, {
   NavigatorIOS,
 } from 'react-native';
 
-class HelloWorld extends Component {
-  render() {
-    return (
-      <View style={styles.container}>
-        <Text style={styles.welcome}>
-          Hello World!
-        </Text>
-      </View>
-    );
-  }
-}
-
 class TriMetLiveApp extends Component {
   render() {
     return (
@@ -41,12 +29,6 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     alignItems: 'center',
     backgroundColor: '#F5FCFF',
-  },
-  text: {
-    color: 'black',
-    backgroundColor: 'white',
-    fontSize: 30,
-    margin: 80
   },
   wrapper: {
     flex: 1,
