@@ -1,9 +1,6 @@
-/**
- * Sample React Native App
- * https://github.com/facebook/react-native
- * @flow
- */
 'use strict';
+
+let SearchPage = require('./SearchPage');
 
 import React, {
   AppRegistry,
@@ -11,7 +8,7 @@ import React, {
   StyleSheet,
   Text,
   View,
-  NavigatorIOS
+  NavigatorIOS,
 } from 'react-native';
 
 class HelloWorld extends Component {
@@ -33,7 +30,7 @@ class TriMetLiveApp extends Component {
         style={styles.wrapper}
         initialRoute={{
           title: 'TriMetLive',
-          component: HelloWorld,
+          component: SearchPage,
         }}/>
     );
   }
